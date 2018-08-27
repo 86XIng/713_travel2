@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>酒店管理</title>
+		<link rel="stylesheet" href="../layui/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">酒店后台</div>
+			</div>
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item">
+							<a class="" href="around_hotel_add.html">添加房间</a>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="around_hotel_room.html">展示房间</a>
+						</li>
+						<li class="layui-nav-item layui_nav_itemd">
+							<a class="" href="">酒店管理</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="layui-body">
+				<div class="y_main">
+					<div class="y_main_title">
+						<span class="layui-breadcrumb">
+                           <a href="around_hotel_index.html">首页</a>
+                           <a><cite>酒店管理</cite></a>
+                        </span>
+					</div>
+					<div class="y_main_body">
+						<!--百度地图容器-->
+						<div style="width:697px;height:550px;border:#ccc solid 1px;float: left;" id="dituContent"></div>
+						<form style="float: left;"  class="layui-form" action="">
+							<div class="layui-form-item">
+								<label class="layui-form-label">酒店名称</label>
+								<div class="layui-input-block">
+									<input type="text" name="hotel_name" lay-verify="required" autocomplete="off" placeholder="请输入酒店名称" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">经度</label>
+								<div class="layui-input-block">
+									<input type="text" name="location_longitude" lay-verify="required" autocomplete="off" placeholder="" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">纬度</label>
+								<div class="layui-input-block">
+									<input type="text" name="location_latitude" lay-verify="required" autocomplete="off" placeholder="" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item layui-form-text">
+								<label class="layui-form-label">位置描述</label>
+								<div class="layui-input-block">
+									<textarea name="location_desc" placeholder="请输入商店位置描述" class="layui-textarea"></textarea>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">酒店图片</label>
+								<div class="layui-input-block">
+									<input type="text" name="hotel_picture" lay-verify="required" autocomplete="off" placeholder="请选取图片" class="layui-input">
+								</div>
+								<div class="layui-input-inline">
+									<button type="button" class="layui-btn layui-btn-primary" id="around_hotel_images">
+										<i class="layui-icon">&#xe621;</i>
+									</button>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">酒店类型</label>
+								<div class="layui-input-inline">
+									<select name="hotel_type">
+										<option value="">请选择酒店类型</option>
+										<option value="1">七星级酒店</option>
+										<option value="2">五星级酒店</option>
+										<option value="3">商务酒店</option>
+									</select>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../layui/layui.js "></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+		<script type="text/javascript" src="../js/map.js"></script>
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('form', function() {
+				var form = layui.form;
+				form.render();
+			});
+		</script>
+	</body>
+
+</html>

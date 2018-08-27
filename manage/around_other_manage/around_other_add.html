@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>添加其他</title>
+		<link rel="stylesheet" href="../layui/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">其他后台</div>
+			</div>
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="">添加其他</a>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="around_other_item.html">展示其他</a>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="around_other_manage.html">添加到地图</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="layui-body">
+				<div class="y_main">
+					<div class="y_main_title">
+						<span class="layui-breadcrumb">
+                           <a href="around_other_index.html">首页</a>
+                           <a><cite>添加其他</cite></a>
+                        </span>
+					</div>
+					<div class="y_main_body">
+						<div class="y_main_index">
+							<form class="layui-form" action="">
+							<div class="layui-form-item">
+								<label class="layui-form-label">名称</label>
+								<div class="layui-input-block">
+									<input type="text" name="item_name" lay-verify="required" autocomplete="off" placeholder="请输入名称" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">类型</label>
+								<div class="layui-input-inline">
+									<select name="item_type">
+										<option value="">请选择类型</option>
+										<option value="1">xx</option>
+										<option value="2">xx</option>
+										<option value="3">xx</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">所属</label>
+								<div class="layui-input-inline">
+									<select name="item_other">
+										<option value="">请选择</option>
+										<option value="1">xx</option>
+										<option value="2">xx</option>
+										<option value="3">xx</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-form-label">价格</div>
+								<div class="layui-input-block">
+									<input type="text" name="item_price" lay-verify="" autocomplete="off" placeholder="￥" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-form-label">折扣</div>
+								<div class="layui-input-block">
+									<input type="text" name="item_discount" lay-verify="" autocomplete="off" placeholder="请输入折扣" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-form-label">总量</div>
+								<div class="layui-input-block">
+									<input type="text" name="item_sum" lay-verify="number" autocomplete="off" placeholder="请输入总量" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-form-label">剩余量</div>
+								<div class="layui-input-block">
+									<input type="text" name="item_surplus" lay-verify="number" autocomplete="off" placeholder="请输入剩余量" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item layui-form-text">
+								<label class="layui-form-label">标签</label>
+								<div class="layui-input-block">
+									<textarea name="item_tag" placeholder="请输入标签" class="layui-textarea"></textarea>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<button class="layui-btn" lay-submit="" lay-filter="">立即提交</button>
+									<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+								</div>
+							</div>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../layui/layui.js "></script>
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('form', function() {
+				var form = layui.form;
+				form.render();
+			});
+		</script>
+	</body>
+
+</html>

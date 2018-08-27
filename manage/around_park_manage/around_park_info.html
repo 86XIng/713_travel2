@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>停车场后台管理</title>
+		<link rel="stylesheet" href="../layui/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">停车场后台</div>
+			</div>
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="">停车场信息</a>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="around_park_manage.html">展示停车场</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="layui-body">
+				<div class="y_main">
+					<div class="y_main_title">
+						<span class="layui-breadcrumb">
+                           <a href="around_park_index.html">首页</a>
+                           <a><cite>停车场信息</cite></a>
+                        </span>
+					</div>
+					<div class="y_main_body">
+						<div class="y_main_index">
+							<form class="layui-form" action="">
+							<div class="layui-form-item">
+								<label class="layui-form-label">停车场管理员</label>
+								<div class="layui-input-block">
+									<input type="text" name="park_man" lay-verify="required" autocomplete="off" placeholder="" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">停车位数量</label>
+								<div class="layui-input-block">
+									<input type="text" name="parkSite_num" lay-verify="number" autocomplete="off" placeholder="请输入停车位数量" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-form-label">时间</div>
+								<div class="layui-input-block">
+									<input type="text" name="park_time" lay-verify="" autocomplete="off" placeholder="" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-form-label">执照</div>
+								<div class="layui-input-block">
+									<input type="text" name="park_license" lay-verify="" autocomplete="off" placeholder="" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item layui-form-text">
+								<label class="layui-form-label">停车场介绍</label>
+								<div class="layui-input-block">
+									<textarea name="park_introduction" placeholder="请输入停车场介绍" class="layui-textarea"></textarea>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<button class="layui-btn" lay-submit="" lay-filter="">立即提交</button>
+									<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+								</div>
+							</div>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../layui/layui.js "></script>
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('form', function() {
+				var form = layui.form;
+				form.render();
+			});
+		</script>
+	</body>
+
+</html>

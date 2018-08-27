@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Travel</title>
+		<link rel="stylesheet" href="css/travel.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href=""/>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="col-sm-2">
+					<div class="header_logo">
+						<a href="index.html">Tour<span>Nest</span></a>
+					</div>
+				</div>
+				<div class="col-sm-10">
+					<div class="header_mainMenu">
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="active"><a>首页</a></li>
+								<li><a>预订服务</a></li>
+								<li><a>周边服务</a></li>
+								<li><a>个人收藏</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!--首页展示内容-->
+		<section class="aboutUs" id="home">
+			<div class="aboutUs_container">
+				<div class="aboutUs_txt">
+					<h2 class="fadeInUp">欢迎使用智慧旅游</h2>
+				</div>
+			</div>
+		</section>
+		<!--预订服务-->
+		<section class="travelBox">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="single_travelBox">
+					<div class="tabs" id="tabs">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#ticketsBooking">
+									<i class="fa fa-tree">
+										景区门票购买
+									</i>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#hotelsBooking">
+									<i class="fa fa-building">
+										酒店房间预订
+									</i>
+								</a>
+							</li>
+						</ul>
+						
+						<!--tab的内容-->
+						<div class="tab_content">
+							<div role="tabpanel" class="tab_pane active fade in" id="ticketsBooking">
+								<div class="tab_para">
+									<div class="col-lg-4 col-md-4 col-sm-7">
+										<div class="single_tabBox">
+											<h2>目的地</h2>
+											<div class="travel_selectIcon">
+												<select class="form-control" onchange="changeCity(this.value)">
+													<option >请选择目的地城市</option>
+													<option value="0">武汉</option>
+													<option value="1">成都</option>
+													<option value="2">大理</option>
+												</select>
+											</div>	
+											<div class="travel_selectIcon">
+												<select id="scenic" class="form-control">
+													<option value="default">请选择景点</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-7">
+										<div class="single_tabBox">
+											<h2>预订日期</h2>
+											<form action="#">
+												<input type="date" class="form-control" placeholder="请选择日期" />
+											</form>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-7">
+										<div class="single_tabBox">
+											<h2>预订票数</h2>
+											<div class="travel_selectIcon">
+												<label>成人票</label>
+												<span id="adulePrice">单价：100元</span>
+												<select class="form-control" id="adultNumber">
+													<option value="0">请选择数量</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+												</select>
+											</div>
+											<div class="travel_selectIcon">
+												<label>儿童票</label>
+											    <span id="childPrice">单价：50元</span>
+												<select class="form-control" id="adultNumber">
+													<option value="0">请选择数量</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-5">
+										<div class="travel_totalPrice">
+											<div class="col-md-3 col-sm-4">
+												<h3>总计：</h3>
+											</div>
+											<div class="col-md-9 col-sm-8">
+												<h3>0元<h3>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="submitBtn" id="ticketBookingSubmit">
+											<button class="travel_btn">提交</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab_pane fade in" id="hotelsBooking">
+								<div class="tab_para">
+									<div class="col-lg-4 col-md-4 col-sm-12">
+										<div class="single_travelBox">
+											<h2>目的地</h2>
+											<div class="travel_selectIcon">
+												<select class="form-control">
+													<option value="default">请选择城市</option>
+													<option value=""></option>
+													<option value=""></option>
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="travel_selectIcon">
+												<select class="form-control">
+													<option value="default">请选择入住酒店</option>
+													<option value=""></option>
+													<option value=""></option>
+													<option value=""></option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-3 col-sm-4">
+										<div class="single_travelBox">
+											<h2>Check In</h2>
+											<form action="#">
+												<input type="date" name="check_in" class="form-control" placeholder="请选择入住日期" />
+											</form>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-3 col-sm-4">
+										<div class="single_travelBox">
+											<h2>Check Out</h2>
+											<form action="#">
+												<input type="date" name="check_out" class="form-control" placeholder="请选择离开日期" />
+											</form>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-12">
+										<div class="single_travelBox">
+											<h2>房型</h2>
+											<div class="travel_selectIcon">
+												<select class="form-control">
+													<option value="dafault">房型请选择</option>
+													<option value="">标准双人间</option>
+													<option value="">豪华大床房</option>
+													<option value="">行政套房</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-5">
+										<div class="travel_totalPrice">
+											<div class="col-md-3 col-sm-4">
+												<h3>总计：</h3>
+											</div>
+											<div class="col-md-9 col-sm-8">
+												<h3>0元<h3>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="submitBtn" id="ticketBookingSubmit">
+											<button class="travel_btn">提交</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</section>
+		<!--周边服务-->
+		<section id="service" class="service">
+			<div class="container">
+				<div class="service_details">
+					<div class="service_header text-center">
+						<h2>周边服务</h2>
+						<p>餐饮&购物</p>
+					</div>
+					<div class="service_content">
+						<div class="service_container">
+							<div class="col-md-6">
+								<div class="service_item">
+									<a href="https://www.baidu.com">
+										<img src="images/tour_service_restaurant.jpg" alt="餐饮" />
+										<div class="service_item_title">
+											<a>餐饮</a>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="service_item">
+									<a>
+										<img src="images/tour_service_shopping.jpg" alt="餐饮" />
+										<div class="service_item_title">
+											<a>购物</a>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--个人收藏-->
+		<section class="colletion">
+			
+		</section>
+		<script type="text/javascript" src="js/travel.js"></script>
+	</body>
+
+</html>
