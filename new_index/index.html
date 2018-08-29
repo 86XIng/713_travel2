@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智慧旅游系统</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <style>
+        a, a:hover, a:active, a:focus {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            position: relative;
+            width: 100%;
+            z-index: -1;
+        }
+        .top {
+            position: absolute;
+            width: 100%;
+        }
+        .top_nav {
+            z-index: 2;
+            position: relative;
+            margin-top: 10px;
+            background: transparent;
+            border: 0;
+        }
+        .top_nav_logo {
+            margin-top: 10px;
+            height: 100%;
+        }
+        .top_nav a{
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+        }
+        .top_nav a span {
+            color: #00d8ff;
+        }
+       
+        .top_nav_right {
+            border: 0;
+            background: transparent;
+            min-height: 70px;
+            margin-bottom: 0px;
+        }
+        .top_nav_right .navbar-collapse {
+            height: 100%;
+        }
+
+        .top_nav_right .nav li a{
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s linear;
+        }
+        .top_nav_right .nav li:last-child a{
+            background-color: #00d8ff;
+            border-radius: 10px;
+        }
+        .top_nav_right .nav li:last-child a:hover {
+            color: white;
+        }
+        .top_nav_right .nav li a:hover {
+            color: #00d8ff;
+            border-bottom: 1px solid #00d8ff;
+        }
+        .top_nav_right .nav .active{
+            background-color: transparent !important;
+            border-bottom: 1px solid #00d8ff;
+        }
+        .top_nav_right .nav .active a{
+            background-color: transparent !important;
+            color: #00d8ff !important;
+        }
+        .top_nav_right .nav .active:hover a{
+            background-color: transparent;
+            color: #00d8ff;
+           
+        }
+        
+        .top_nav_border {
+            border-top: 2px solid white;
+        }
+
+
+
+
+        .section_1 {
+            position: relative;
+            min-height: 1000px;
+            background: url('./images/home/banner.jpg') no-repeat;
+            background-position: center;
+            display: flex;
+            align-items:center;
+        }
+        .section_1:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 29, 41, 0.4);
+        }
+        .section_1_center h1 {
+            color: white;
+            font-size: 90px;
+            max-width: 800px;
+            font-weight: 400;
+            line-height: 1.22;
+        }
+        .section_1_center h2 {
+            color: white;
+            text-align: right;
+        }
+        .section_1_center_button button {
+            width: 200px;
+            height: 60px;
+            font-size: 15px;
+            color: white;
+            background-color: #00d8ff;
+        }
+        .section_2_box {
+            margin-top: -120px;
+            background: #fff;
+            box-shadow:  0px 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .section_2_box .tab-content {
+            padding: 43px 42px 24px;
+        }
+        .section_2_nav li a{
+            color: white;
+            background-color: #00d8ff;
+            font-size: 20px;
+            font-weight: 500l
+
+        }
+        .section_2 .travel-btn {
+            width: 180px;
+            background: #00d8ff;
+            color: white;
+            font-size: 16px;
+            height: 60px;
+            border:1px solid #00d8ff;
+        }
+
+
+        .section_3_gallerys {
+            margin-top: 117px;
+            margin-bottom: 109px;
+        }
+        .section_3_gallerys .gallery_header h1{
+            padding-bottom: 14px;
+            font-size: 30px;
+            font-weight: 500;
+            color: #565a5c;
+        }
+        .section_3_gallerys .gallery_header span{
+            color: #aaaaaa;
+            margin-top: 17px;
+            font-size: 16px;
+        }
+        .section_3_gallerys .gallery_body {
+            margin-top: 62px;
+        }
+        .section_3_gallerys .gallery_items {       
+            overflow: hidden;         
+            position: relative;
+            transition: all 1s ease;
+            margin-bottom: 29px;
+        }
+        .section_3_gallerys .gallery_items img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s ease;
+        }
+        .section_3_gallerys .gallery_items:hover img{
+            /* hover放大 */
+            transform:scale(1.5);
+            
+        }
+        .section_3_gallerys .gallery_item_title{
+            left: 60px;
+            width: 170px;
+            height: 60px;
+            color: #ffffff;
+            position: absolute;
+            bottom: 20%;
+        }
+        .section_3_gallerys .gallery_item_title .h3{
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .section_3_gallerys .gallery_item_title span {
+            font-size: 16px;
+            padding-right: 10px;
+        }
+        
+
+        .section_4 {
+            background: url('images/home/offer-timer.jpg') no-repeat;
+
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            overflow: hidden;
+        }
+        .section_4_content {
+            
+            left: 100%;
+            height: 400px;
+            position: relative;
+            transition : all 1s ease;
+        }
+        .section_4_flyin {
+            top: 0px;
+            left: 0px;
+            transition : all 1s ease;
+
+        }
+        .section_4 .section_4_title {
+            
+            margin-top: 150px;
+            color: white;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .section_4 .section_4_timer {
+            
+            text-align:center;
+            color: white;
+            font-size: 20px;
+        }
+        .section_4 .section_4_button {
+            
+            margin-top: 39px;
+            margin-bottom: 40px;
+        }
+        .section_4 .section_4_button button {
+           
+            color: white;
+            font-size: 20px;
+            border: 0;
+            background-color: #00d8ff;
+            width: 200px;
+            height: 60px;
+            max-width: 160px;
+        }
+
+
+        .section_5 .section_5_header {
+            margin-top: 80px;
+        }
+        .section_5_header .gallery_header h2 {
+            font-size: 20px;
+            color: #aaaaaa;
+            margin-bottom: 20px;
+        }
+        .section_5_gallery .gallery_items {
+            margin-bottom: 20px;
+            box-shadow:  0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+        .section_5_gallery .gallery_items:hover {
+            box-shadow:  0px 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .section_5_gallery .gallery_items img{
+            max-width: 100%;
+        }
+        .section_5_gallery .gallery_description {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .section_6 {
+            box-sizing: border-box;
+            padding-top: 100px;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+        .section_6_header {
+           
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section_6_cover {
+            width: 100%;
+            height: 514px;
+        }
+        .section_6_carousel {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .carousel_items{
+            text-align: center;
+        }   
+        /* .carousel_items:nth-child(1){
+            left: -100%;
+            position: absolute;
+        }
+        .carousel_items:nth-child(2){
+            left: 5%;
+            position: absolute;
+        }
+        .carousel_items:nth-child(3){
+            left: 100%;
+            position: absolute;
+        } */
+        .carousel_items .carousel_contain {
+            background-color: #fff;
+            box-shadow:  0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .section_6_carousel_header img{
+            border-radius: 50%;
+        }
+
+
+        .section_7 {
+            background: url('images/offer/offer-banner.jpg');
+            position: relative;
+            z-index: 1;
+            background-size: cover;
+        }
+        .section_7::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 4, 4, 0.6);
+            z-index: -1;
+        }
+        .section_7_content_left {
+            padding: 172px 0 0;
+            color: white;
+        }
+        .content_right_bg {
+            position: relative;
+            z-index: -1;
+        }
+        .content_right_bg img{
+            height: 807px;
+        }
+        .content_right_txt {
+            position: absolute;
+            top: 80px;
+            color: white;
+           width: 310px;
+        }
+        .content_right_txt h2 {
+            font-size: 80px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+
+        .section_8{
+            display: flex;
+            align-items:center;
+            margin-top: 80px;
+            box-sizing: border-box;
+            margin-bottom: 80px;
+        }
+        .section_8_header {
+            text-align: center;
+        }
+        .section_8_card {
+            box-shadow:  0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s linear;
+        }
+        .section_8_card:hover {
+            box-shadow:  0px 15px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s linear;
+        }
+        
+        .section_8_card:hover .card_img img{
+            mix-blend-mode: darken; 
+            filter: grayscale(100%);
+            filter: blur(3px);
+            transition: all 0.3s linear;
+        }
+        .section_8_card .card_img {
+            overflow: hidden;
+            transition: all 0.5s linear;
+        }
+        
+        .section_8 .card_title {
+            padding: 20px;
+        }
+        .section_8 .card_description {
+            padding: 20px;
+        }
+
+        .section_9 {
+            background: url('images/home/subscribe-banner.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            overflow: hidden;
+        }
+        .section_9 .container {
+            margin-top: 50px;
+            margin-bottom: 60px;
+            color: white;
+        }
+        .section_9_button {
+            margin-top: 20px;
+        }
+        .section_9_button button{
+            color: white;
+            font-size: 20px;
+            border: 0;
+            background-color: #00d8ff;
+            width: 200px;
+            height: 60px;
+            max-width: 160px;
+        }
+
+
+        .panel-footer p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_nav container">
+            <div class="row">
+                <div class="top_nav_logo col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="">
+                        <a href="#">
+                            Tour
+                            <span>Nest</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                    
+                    <nav class="top_nav_right navbar navbar-default" role="navigation">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">    
+                            <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="#">Home</a></li>
+                                    <li><a href="#">Destination</a></li>
+                                    <li><a href="#">Packages</a></li>
+                                    <li><a href="#">Special Offers</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Subscription</a></li>
+                                    <li><a href="#">Book Now</a></li>
+
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                        
+                </div>
+                
+                
+                <div class="top_nav_border col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    
+                </div>
+                
+            </div>
+        </div>  
+    </div>
+   
+    <div class="section_1">
+        <div class="container">
+            <div class="row">
+                <div class="section_1_center col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <h1>迟日江山丽，</h1><h1>春风花草香。</h1>
+                        
+                        <h2 class="push-right">————唐 &nbsp;杜甫</h2>
+                        <br>
+                        <div class="section_1_center_button">
+                            <button class="btn btn-large">EXPLORE NOW</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+        
+           
+    </div>
+
+    <div class="section_2">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="section_2_box">
+                        
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="section_2_nav nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#tours" aria-controls="tours" role="tab" data-toggle="tab">Tours</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Hotels</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Flights</a>
+                                </li>
+                            </ul>
+                        
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active fade in" id="tours">
+                                    <div class="tab-para">
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+
+                                                    <h2>destination</h2>
+
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">enter your destination country</option><!-- /.option-->
+
+                                                              <option value="turkey">turkey</option><!-- /.option-->
+
+                                                              <option value="russia">russia</option><!-- /.option-->
+                                                              <option value="egept">egypt</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">enter your destination location</option><!-- /.option-->
+
+                                                              <option value="istambul">istambul</option><!-- /.option-->
+
+                                                              <option value="mosko">mosko</option><!-- /.option-->
+                                                              <option value="cairo">cairo</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>check in</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 ">
+                                                        </form>
+                                                    </div><!-- /.travel-check-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>check out</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 ">
+                                                        </form>
+                                                    </div><!-- /.travel-check-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>duration</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">5</option><!-- /.option-->
+
+                                                              <option value="10">10</option><!-- /.option-->
+
+                                                              <option value="15">15</option><!-- /.option-->
+                                                              <option value="20">20</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>members</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">1</option><!-- /.option-->
+
+                                                              <option value="2">2</option><!-- /.option-->
+
+                                                              <option value="4">4</option><!-- /.option-->
+                                                              <option value="8">8</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                        </div><!--/.row-->
+
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <div class="travel-budget">
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-sm-4">
+                                                            <!-- <h3>budget : </h3> -->
+                                                        </div><!--/.col-->
+                                                        <div class="co-md-9 col-sm-8">
+                                                            <div class="travel-filter">
+                                                                <div class="info_widget">
+                                                                    <div class="price_filter">
+                                                                        
+                                                                        <div id="slider-range"></div><!--/.slider-range-->
+
+                                                                        <div class="price_slider_amount">
+                                                                            <!-- <input type="text" id="amount" name="price"  placeholder="Add Your Price" /> -->
+                                                                        </div><!--/.price_slider_amount-->
+                                                                    </div><!--/.price-filter-->
+                                                                </div><!--/.info_widget-->
+                                                            </div><!--/.travel-filter-->
+                                                        </div><!--/.col-->
+                                                    </div><!--/.row-->
+                                                </div><!--/.travel-budget-->
+                                            </div><!--/.col-->
+                                            <div class="clo-sm-7">
+                                                <div class="about-btn travel-mrt-0 pull-right">
+                                                    <button  class="about-view travel-btn">
+                                                        search	
+                                                    </button><!--/.travel-btn-->
+                                                </div><!--/.about-btn-->
+                                            </div><!--/.col-->
+
+                                        </div><!--/.row-->
+
+                                    </div><!--/.tab-para-->
+
+                                </div><!--/.tabpannel-->
+
+                                <div role="tabpanel" class="tab-pane fade in" id="hotels">
+                                    <div class="tab-para">
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+
+                                                    <h2>destination</h2>
+
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">enter your destination country</option><!-- /.option-->
+
+                                                              <option value="turkey">turkey</option><!-- /.option-->
+
+                                                              <option value="russia">russia</option><!-- /.option-->
+                                                              <option value="egept">egypt</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">enter your destination location</option><!-- /.option-->
+
+                                                              <option value="istambul">istambul</option><!-- /.option-->
+
+                                                              <option value="mosko">mosko</option><!-- /.option-->
+                                                              <option value="cairo">cairo</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>check in</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 ">
+                                                        </form>
+                                                    </div><!-- /.travel-check-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>check out</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 ">
+                                                        </form>
+                                                    </div><!-- /.travel-check-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>duration</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">5</option><!-- /.option-->
+
+                                                              <option value="10">10</option><!-- /.option-->
+
+                                                              <option value="15">15</option><!-- /.option-->
+                                                              <option value="20">20</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>members</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">1</option><!-- /.option-->
+
+                                                              <option value="2">2</option><!-- /.option-->
+
+                                                              <option value="4">4</option><!-- /.option-->
+                                                              <option value="8">8</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                        </div><!--/.row-->
+
+                                        <div class="row">
+                                            <div class="col-sm-5"></div><!--/.col-->
+                                            <div class="clo-sm-7">
+                                                <div class="about-btn travel-mrt-0 pull-right">
+                                                    <button  class="about-view travel-btn">
+                                                        search	
+                                                    </button><!--/.travel-btn-->
+                                                </div><!--/.about-btn-->
+                                            </div><!--/.col-->
+
+                                        </div><!--/.row-->
+
+                                    </div><!--/.tab-para-->
+
+                                </div><!--/.tabpannel-->
+
+                                <div role="tabpanel" class="tab-pane fade in" id="flights">
+                                    <div class="tab-para">
+                                        <div class="trip-circle">
+                                            <div class="single-trip-circle">
+                                                <input type="radio" id="radio01" name="radio" />
+                                                  <label for="radio01">
+                                                      <span class="round-boarder">
+                                                          <span class="round-boarder1"></span>
+                                                      </span>round trip
+                                                  </label>
+                                            </div><!--/.single-trip-circle-->
+                                            <div class="single-trip-circle">
+                                                <input type="radio" id="radio02" name="radio" />
+                                                  <label for="radio02">
+                                                      <span class="round-boarder">
+                                                          <span class="round-boarder1"></span>
+                                                      </span>on way
+                                                  </label>
+                                            </div><!--/.single-trip-circle-->
+                                        </div><!--/.trip-circle-->
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+
+                                                    <h2>from</h2>
+
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">enter your location</option><!-- /.option-->
+
+                                                              <option value="turkey">turkey</option><!-- /.option-->
+
+                                                              <option value="russia">russia</option><!-- /.option-->
+                                                              <option value="egept">egypt</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>departure</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="departure" class="form-control" data-toggle="datepicker"
+                                                            placeholder="12 -01 - 2017 ">
+                                                        </form>
+                                                    </div><!-- /.travel-check-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>return</h2>
+                                                    <div class="travel-check-icon">
+                                                        <form action="#">
+                                                            <input type="text" name="return" class="form-control" data-toggle="datepicker" placeholder="22 -01 - 2017 ">
+                                                        </form>
+                                                    </div><!-- /.travel-check-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>adults</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">5</option><!-- /.option-->
+
+                                                              <option value="10">10</option><!-- /.option-->
+
+                                                              <option value="15">15</option><!-- /.option-->
+                                                              <option value="20">20</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                            <div class="col-lg-2 col-md-1 col-sm-4">
+                                                <div class="single-tab-select-box">
+                                                    <h2>childs</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">1</option><!-- /.option-->
+
+                                                              <option value="2">2</option><!-- /.option-->
+
+                                                              <option value="4">4</option><!-- /.option-->
+                                                              <option value="8">8</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+
+                                        </div><!--/.row-->
+
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                                <div class="single-tab-select-box">
+
+                                                    <h2>to</h2>
+
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">enter your destination location</option><!-- /.option-->
+
+                                                              <option value="istambul">istambul</option><!-- /.option-->
+
+                                                              <option value="mosko">mosko</option><!-- /.option-->
+                                                              <option value="cairo">cairo</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+                                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                                <div class="single-tab-select-box">
+
+                                                    <h2>class</h2>
+                                                    <div class="travel-select-icon">
+                                                        <select class="form-control ">
+
+                                                              <option value="default">enter class</option><!-- /.option-->
+
+                                                              <option value="A">A</option><!-- /.option-->
+
+                                                              <option value="B">B</option><!-- /.option-->
+                                                              <option value="C">C</option><!-- /.option-->
+
+                                                        </select><!-- /.select-->
+                                                    </div><!-- /.travel-select-icon -->
+                                                </div><!--/.single-tab-select-box-->
+                                            </div><!--/.col-->
+                                            <div class="clo-sm-5">
+                                                <div class="about-btn pull-right">
+                                                    <button  class="about-view travel-btn">
+                                                        search	
+                                                    </button><!--/.travel-btn-->
+                                                </div><!--/.about-btn-->
+                                            </div><!--/.col-->
+                                            
+                                        </div><!--/.row-->
+
+                                    </div>
+
+                                </div><!--/.tabpannel-->
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="section_3">
+        
+        <div class="container">
+            <div class="section_3_gallerys">
+                <div class="gallery_header text-center">
+                    <h1>推荐目的地</h1>
+                    <span>不知道去哪些景点？我们为您推荐</span>
+                </div>
+                <div class="gallery_body">
+                    
+                    <div class="row">
+                        
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="gallery_items">
+                                <img src="images/gallary/g1.jpg" alt="">
+                                <div class="gallery_item_title">
+                                    <h3>武汉</h3>
+                                    <span>20 小时</span>
+                                    <span>5 景点</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="gallery_items">
+                                <img src="images/gallary/g2.jpg" alt="">
+                                <div class="gallery_item_title">
+                                    <h3>杭州</h3>
+                                    <span>12 小时</span>
+                                    <span>5 景点</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="gallery_items">
+                                <img src="images/gallary/g3.jpg" alt="">
+                                <div class="gallery_item_title">
+                                    <h3>北京</h3>
+                                    <span>12 小时</span>
+                                    <span>5 景点</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="gallery_items">
+                                <img src="images/gallary/g4.jpg" alt="">
+                                <div class="gallery_item_title">
+                                    <h3>上海</h3>
+                                    <span>12 小时</span>
+                                    <span>5 景点</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="gallery_items">
+                                <img src="images/gallary/g5.jpg" alt="">
+                                <div class="gallery_item_title">
+                                    <h3>广州</h3>
+                                    <span>12 小时</span>
+                                    <span>5 景点</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <div class="gallery_items">
+                                <img src="images/gallary/g6.jpg" alt="">
+                                <div class="gallery_item_title">
+                                    <h3>深圳</h3>
+                                    <span>12 小时</span>
+                                    <span>5 景点</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="section_4" >
+        <div class="section_4_content">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="section_4_title">
+                            <h1>Join With Us Within 7 March, 2019 And Get Upto 40% Discount</h1>
+                        </div>
+                        <div class="section_4_timer">
+                            <span id="day">0</span>天<span id="hour">0</span>小时<span id="minute">0</span>分钟<span id="second">0</span>秒
+                        </div>
+                        <div class="section_4_button">
+                            
+                            <button type="button" class="btn btn-default">button</button>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="section_5">
+        <div class="section_5_header">
+            <div class="gallery_header text-center">
+                <h1>推荐目的地</h1>
+                <h2>不知道去哪些景点？我们为您推荐</h2>
+            </div>
+        </div>
+        <div class="section_5_gallery container">
+            <div class="row">
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="gallery_items">
+                        <img src="images/packages/p1.jpg" alt="">
+                        <div class="gallery_description">
+                            <h3>Italy</h3>
+                            <hr>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam explicabo ut facilis soluta saepe. Consequatur, atque vitae quia, aperiam inventore ullam fugiat reprehenderit dolorum, explicabo deserunt quod modi nesciunt dolorem.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="gallery_items">
+                        <img src="images/packages/p1.jpg" alt="">
+                        <div class="gallery_description">
+                            <h3>Italy</h3>
+                            <hr>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam explicabo ut facilis soluta saepe. Consequatur, atque vitae quia, aperiam inventore ullam fugiat reprehenderit dolorum, explicabo deserunt quod modi nesciunt dolorem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="gallery_items">
+                        <img src="images/packages/p1.jpg" alt="">
+                        <div class="gallery_description">
+                            <h3>Italy</h3>
+                            <hr>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam explicabo ut facilis soluta saepe. Consequatur, atque vitae quia, aperiam inventore ullam fugiat reprehenderit dolorum, explicabo deserunt quod modi nesciunt dolorem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="gallery_items">
+                        <img src="images/packages/p1.jpg" alt="">
+                        <div class="gallery_description">
+                            <h3>Italy</h3>
+                            <hr>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam explicabo ut facilis soluta saepe. Consequatur, atque vitae quia, aperiam inventore ullam fugiat reprehenderit dolorum, explicabo deserunt quod modi nesciunt dolorem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="gallery_items">
+                        <img src="images/packages/p1.jpg" alt="">
+                        <div class="gallery_description">
+                            <h3>Italy</h3>
+                            <hr>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam explicabo ut facilis soluta saepe. Consequatur, atque vitae quia, aperiam inventore ullam fugiat reprehenderit dolorum, explicabo deserunt quod modi nesciunt dolorem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="gallery_items">
+                        <img src="images/packages/p1.jpg" alt="">
+                        
+                        <div class="gallery_description">
+                            <h3>Italy</h3>
+                            <hr>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam explicabo ut facilis soluta saepe. Consequatur, atque vitae quia, aperiam inventore ullam fugiat reprehenderit dolorum, explicabo deserunt quod modi nesciunt dolorem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="section_6">
+        <div class="section_6_header">
+            <h1>Clients Reviews</h1>
+            <p>Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.</p>
+        </div> 
+        <div class="container">          
+            <div class="row">
+                <div class="section_6_cover col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="section_6_carousel">
+                        
+                    
+                        <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="carousel_contain">
+                                <div class="section_6_carousel_header">
+                                    <img src="images/client/testimonial1.jpg" alt="">
+                                </div>
+                                <div class="section_6_carousel_content">
+                                    <p class="motto">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                    </p>
+                                    <p class="name">
+                                        Kenvin Watson
+                                    </p>
+                                    <p class="location">
+                                        London,England
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="carousel_contain">
+                                <div class="section_6_carousel_header">
+                                    <img src="images/client/testimonial1.jpg" alt="">
+                                </div>
+                                <div class="section_6_carousel_content">
+                                    <p class="motto">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                    </p>
+                                    <p class="name">
+                                        Kenvin Watson
+                                    </p>
+                                    <p class="location">
+                                        London,England
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="carousel_contain">
+                                <div class="section_6_carousel_header">
+                                    <img src="images/client/testimonial1.jpg" alt="">
+                                </div>
+                                <div class="section_6_carousel_content">
+                                    <p class="motto">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                    </p>
+                                    <p class="name">
+                                        Kenvin Watson
+                                    </p>
+                                    <p class="location">
+                                        London,England
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                                
+                            
+                            
+                            
+                                    
+                                <!-- <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="carousel_contain">
+                                        <div class="section_6_carousel_header">
+                                            <img src="images/client/testimonial1.jpg" alt="">
+                                        </div>
+                                        <div class="section_6_carousel_content">
+                                            <p class="motto">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                            </p>
+                                            <p class="name">
+                                                Kenvin Watson
+                                            </p>
+                                            <p class="location">
+                                                London,England
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="carousel_contain">
+                                        <div class="section_6_carousel_header">
+                                            <img src="images/client/testimonial1.jpg" alt="">
+                                        </div>
+                                        <div class="section_6_carousel_content">
+                                            <p class="motto">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                            </p>
+                                            <p class="name">
+                                                Kenvin Watson
+                                            </p>
+                                            <p class="location">
+                                                London,England
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="carousel_contain">
+                                        <div class="section_6_carousel_header">
+                                            <img src="images/client/testimonial1.jpg" alt="">
+                                        </div>
+                                        <div class="section_6_carousel_content">
+                                            <p class="motto">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                            </p>
+                                            <p class="name">
+                                                Kenvin Watson
+                                            </p>
+                                            <p class="location">
+                                                London,England
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>      
+                                <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="carousel_contain">
+                                        <div class="section_6_carousel_header">
+                                            <img src="images/client/testimonial1.jpg" alt="">
+                                        </div>
+                                        <div class="section_6_carousel_content">
+                                            <p class="motto">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                            </p>
+                                            <p class="name">
+                                                Kenvin Watson
+                                            </p>
+                                            <p class="location">
+                                                London,England
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="carousel_contain">
+                                        <div class="section_6_carousel_header">
+                                            <img src="images/client/testimonial1.jpg" alt="">
+                                        </div>
+                                        <div class="section_6_carousel_content">
+                                            <p class="motto">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                            </p>
+                                            <p class="name">
+                                                Kenvin Watson
+                                            </p>
+                                            <p class="location">
+                                                London,England
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="carousel_items col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="carousel_contain">
+                                        <div class="section_6_carousel_header">
+                                            <img src="images/client/testimonial1.jpg" alt="">
+                                        </div>
+                                        <div class="section_6_carousel_content">
+                                            <p class="motto">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi neque expedita cumque, voluptate distinctio dolorum tenetur sit! Quos dignissimos quisquam eaque adipisci non aliquam provident, voluptate accusamus perspiciatis? Suscipit!
+                                            </p>
+                                            <p class="name">
+                                                Kenvin Watson
+                                            </p>
+                                            <p class="location">
+                                                London,England
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div> -->
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- <ul class="carousel_control">
+            <li class="carousel_control_1">-1</li>
+            <li class="carousel_control_2">0</li>
+            <li class="carousel_control_3">1</li>
+        </ul> -->
+                
+        
+    </div>
+
+    <div class="section_7">
+        <div class="container">
+            <div class="section_7_content">
+                <div class="row">
+                    
+                    <div class="section_7_content_left col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magni qui asperiores possimus nemo dignissimos laudantium sint repudiandae fuga ullam consequatur repellat praesentium dolorum eveniet doloremque, veritatis molestias eaque ipsam!</h1>
+                    </div>
+                    
+                    <div class="section_7_content_right col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="content_right_bg">
+                            <img src="images/offer/offer-shape.png" alt="">
+                        </div>
+                        <div class="content_right_txt">
+                            <h2>50% off</h2>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section_8">
+        <div class="container">
+            <div class="section_8_header">
+                <h1>Latest News</h1>
+                <p>Travel News from all over the world</p>
+            </div>
+            <div class="section_8_content row">
+                
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="section_8_card">
+
+                        
+                            <div class="card_title">
+                                <h4>Trending News </h4>
+                            </div>
+                            <div class="card_img">
+                                <img src="images/blog/b1.jpg" alt="">
+                            </div>
+                            <div class="card_description">
+                                <h5>Discover On Beautiful Weather, Fantastic Foods And Historical Place In Prag</h5>
+                                <p>Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="section_8_card">
+
+                        
+                            <div class="card_title">
+                                <h4>Trending News </h4>
+                            </div>
+                            <div class="card_img">
+                                <img src="images/blog/b1.jpg" alt="">
+                            </div>
+                            <div class="card_description">
+                                <h5>Discover On Beautiful Weather, Fantastic Foods And Historical Place In Prag</h5>
+                                <p>Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="section_8_card">
+
+                        
+                            <div class="card_title">
+                                <h4>Trending News </h4>
+                            </div>
+                            <div class="card_img">
+                                <img src="images/blog/b1.jpg" alt="">
+                            </div>
+                            <div class="card_description">
+                                <h5>Discover On Beautiful Weather, Fantastic Foods And Historical Place In Prag</h5>
+                                <p>Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="section_9">
+        <div class="container">
+            <h1>Join Our Subscribers List To Get Regular Update</h1>
+            <p>Subscribe Now. We will send you Best offer for your Trip</p>
+            <div class="row">
+                <div class="form-group">
+                    <label for="input" class="col-sm-2 control-label">:</label>
+                    <div class="col-sm-8">
+                        <input type="search" name="" id="input" class="form-control" value="" required="required" title="">
+                    </div>
+                </div>
+            </div>
+            <div class="section_9_button">
+                            
+                <button type="button" class="btn btn-default">button</button>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <footer class="panel-footer">
+        <div class="container" style="margin-top:100px;margin-bottom:100px;">
+            <div class="row">
+                
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta quos saepe quasi? Aut dolore nostrum, provident beatae, deserunt qui quidem voluptas eius repudiandae soluta in quam nobis ipsum ratione.
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cumque pariatur cum illo consectetur, itaque deserunt praesentium odit ipsam non exercitationem consequuntur? Error quidem esse itaque inventore praesentium. Tempore, ex?
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum vitae accusamus quasi rem natus. Praesentium, quia? Veniam voluptatem, provident aliquam aperiam suscipit consequatur. Facilis et in impedit? Quidem, temporibus aut.
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, eos? Omnis in impedit neque sed, quia iure ex aut id modi fuga soluta aliquam eaque eos sunt, harum et. Error!
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+        <p>© 2017 All Right Reserved</p>
+    </footer>
+
+    
+    
+</body>
+<script src="js/stellar.js"></script>
+<script>
+
+    $('.carousel_control li:nth-child(1)').click(function(e){
+        var left = $('.section_6_carousel').position().left;
+        console.log(left);
+        e.preventDefault();
+    });
+     
+
+    $(document).ready(function(){
+        $('.navbar-right li').click(function(){
+            $(this).addClass('active').siblings('li').removeClass('active');
+        });
+        countDown(100000);
+    })
+    $(document).scroll(function(){
+        var articleHeight = $('.section_4').offset().top-$('.section_4').height();
+        var content = $('.section_4_content')
+        var top=$(document).scrollTop();
+        // console.log(articleHeight);
+        // console.log(top)
+		if(top > 0 && top >= articleHeight){
+			content.addClass('section_4_flyin');
+		} else if (top > 0 && top < articleHeight){
+            content.removeClass('section_4_flyin');
+        }
+    })
+
+    function countDown(times){
+            var timer=null;
+            timer=setInterval(function(){
+                var day=0,
+                hour=0,
+                minute=0,
+                second=0;//时间默认值
+                if(times > 0){
+                day = Math.floor(times / (60 * 60 * 24));
+                hour = Math.floor(times / (60 * 60)) - (day * 24);
+                minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+                }
+                if (day <= 9) day = '0' + day;
+                if (hour <= 9) hour = '0' + hour;
+                if (minute <= 9) minute = '0' + minute;
+                if (second <= 9) second = '0' + second;
+                //
+                $('#day').text(day);
+                $('#hour').text(hour);
+                $('#minute').text(minute);
+                $('#second').text(second);
+                // console.log(day+"天:"+hour+"小时："+minute+"分钟："+second+"秒");
+                times++;
+            },1000);
+            if(times<=0){
+                clearInterval(timer);
+            }
+        }
+    
+</script>
+</html>
